@@ -1,16 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import logo1 from "../assests/logo1.png";
 
 function Navbar() {
   return (
     <>
-      <nav className="bg-blue-800 p-5 md:flex">
-        <div className="container mx-auto flex justify-between items-center md:flex md:shrink">
-          <div className="hidden lg:flex space-x-4 md:flex gap-1 text-lg ">
+      <nav className="bg-blue-800 p-5 flex shadow-lg ">
+        <div>
+          <Link to="/">
+            <img src={logo1} alt="logo" className="h-10 w-auto " />
+          </Link>
+        </div>
+
+        <div className="container mx-auto flex justify-end">
+          <div className="hidden lg:flex space-x-4  gap-1 text-lg ">
             <Link
               to="/"
-              className="text-white hover:bg-gray-700 p-2 rounded-md md:flex-1"
+              className="text-white hover:bg-gray-700 p-2 rounded-md"
             >
               Home
             </Link>
