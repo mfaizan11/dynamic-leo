@@ -45,7 +45,7 @@ function Navbar() {
             </button>
           </div>
         </div>
-        {/* Navbar End Start */}
+        {/* Navbar End  */}
 
         <button
           className="block md:hidden"
@@ -68,7 +68,7 @@ function Navbar() {
         </button>
 
         <div
-          className={`fixed top-0 left-0 h-full w-64 bg-gray-700 transform transition-transform duration-300 ${
+          className={`fixed top-0 left-0 h-full w-64 bg-gray-700 transform transition-transform duration-300 z-50 ${
             menuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
@@ -92,7 +92,7 @@ function Navbar() {
             </svg>
           </button>
 
-          <div className="flex flex-col items-center mt-10 space-y-4">
+          <div className="flex flex-col items-center mt-10 space-y-4 z-10">
             <Link
               to="/"
               className="text-white hover:bg-gray-700 p-2 rounded-md"
