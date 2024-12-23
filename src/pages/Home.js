@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 
 import ecommerce from "../assests/ecommerece.jpg";
 
 function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef(null); // Reference for the slider
 
   const settings = {
     dots: true,
@@ -12,58 +12,50 @@ function Home() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    afterChange: (index) => setCurrentSlide(index),
-    arrows: true,
+    arrows: false, // Disable built-in arrows
   };
 
   return (
-    <div className="hero-section ">
-      <div className="relative z-0">
-        <Slider {...settings} className="carousel-container">
-          <div className="hero-slide">
+    <div className="hero-section h-screen relative">
+      <div className="relative z-0 h-full">
+        <Slider
+          {...settings}
+          ref={sliderRef}
+          className="carousel-container h-full"
+        >
+          <div key="slide1" className="hero-slide h-[70vh] relative">
             <img
               src={ecommerce}
               alt="Slide 1"
               className="w-full h-full object-cover"
             />
-            <div className="hero-overlay absolute top-0 left-0 w-full h-full  bg-opacity-50 flex justify-center items-center text-white">
-              <div className="text-center px-4">
-                <h1 className="text-3xl md:text-5xl font-bold">
-                  Welcome to Our Website
-                </h1>
-              </div>
+            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center text-white z-10">
+              <h1 className="text-3xl md:text-5xl font-bold">
+                Welcome to Our Website
+              </h1>
             </div>
           </div>
 
-          <div className="hero-slide">
+          <div key="slide2" className="hero-slide h-[70vh] relative">
             <img
               src={ecommerce}
-              alt=""
+              alt="Slide 2"
               className="w-full h-full object-cover"
             />
-            <div className="hero-overlay absolute top-0 left-0 w-full h-full  bg-opacity-50 flex justify-center items-center text-white">
-              <div className="text-center px-4">
-                <h1 className=" text-3xl md:text-5xl font-bold"> </h1>
-              </div>
+            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center text-white z-10">
+              <h1 className="text-3xl md:text-5xl font-bold">
+                Discover Our Products
+              </h1>
             </div>
           </div>
 
-          <div className="hero-slide">
-            <img
-              src={ecommerce}
-              alt=""
-              className="w-full h-full object-cover"
-            />
-            <div className="hero-overlay absolute top-0 left-0 w-full h-full flex justify-center items-center text-white">
-              <div className="text-center px-4">
-                <h1 className="text-3xl md:text-5xl font-bold"></h1>
-              </div>
-            </div>
-          </div>
+          {/* Add more slides as needed */}
         </Slider>
+
+        {/* Custom Arrow Buttons */}
         <button
           className="absolute left-5 top-1/2 transform -translate-y-1/2 text-white z-10"
-          onClick={() => setCurrentSlide(currentSlide - 1)}
+          onClick={() => sliderRef.current.slickPrev()} // Navigate to previous slide
         >
           <svg
             className="w-8 h-8"
@@ -82,7 +74,7 @@ function Home() {
         </button>
         <button
           className="absolute right-5 top-1/2 transform -translate-y-1/2 text-white z-10"
-          onClick={() => setCurrentSlide(currentSlide + 1)}
+          onClick={() => sliderRef.current.slickNext()} // Navigate to next slide
         >
           <svg
             className="w-8 h-8"
