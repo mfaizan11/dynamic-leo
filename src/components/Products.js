@@ -1,4 +1,7 @@
 import React from "react";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Products = () => {
   const products = [
@@ -9,8 +12,18 @@ const Products = () => {
     { id: 5, name: "Product 5", price: "RS 3000" },
   ];
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4">
+    <div
+      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4"
+      data-aos="fade-up"
+    >
       {products.map((product) => (
         <div
           key={product.id}

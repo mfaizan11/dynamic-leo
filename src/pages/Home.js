@@ -1,12 +1,21 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Slider from "react-slick";
 
 import ecommerce from "../assests/ecommerece.jpg";
 import About from "./About";
 import Products from "../components/Products";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
   const sliderRef = useRef(null);
+
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   const settings = {
     dots: true,
@@ -29,20 +38,31 @@ function Home() {
                 className="w-full aspect-video object-cover"
               />
               <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center text-white z-10">
-                <h1 className="text-3xl md:text-5xl font-bold">
+                <h1
+                  className="text-3xl md:text-5xl font-bold"
+                  data-aos="fade-up"
+                >
                   Welcome to Our Website
                 </h1>
               </div>
             </div>
 
-            <div key="slide2" className="hero-slide aspect-video relative">
+            <div
+              key="slide2"
+              className="hero-slide aspect-video relative"
+              data-aos="fade-up"
+            >
               <img
                 src={ecommerce}
                 alt="Slide 2"
                 className="w-full aspect-video object-cover"
+                data-aos="fade-up"
               />
               <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center text-white z-10">
-                <h1 className="text-3xl md:text-5xl font-bold">
+                <h1
+                  className="text-3xl md:text-5xl font-bold"
+                  data-aos="fade-up"
+                >
                   Discover Our Products
                 </h1>
               </div>

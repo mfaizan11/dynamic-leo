@@ -1,9 +1,22 @@
 import React from "react";
+import { useEffect } from "react";
 import ecommerce from "../assests/ecommerece.jpg";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function About() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <div className="container mx-auto mt-12 py-10 px-4 flex flex-col md:flex-row items-center justify-center bg-gray-100 rounded-lg  shadow-lg">
+    <div
+      className="container mx-auto mt-12 py-10 px-4 flex flex-col md:flex-row items-center justify-center bg-gray-100 rounded-lg  shadow-lg"
+      data-aos="fade-up"
+    >
       <div className="flex-1 basis-1 mb-6 md:mb-0">
         <img
           src={ecommerce}
