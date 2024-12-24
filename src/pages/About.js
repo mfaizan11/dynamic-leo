@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import ecommerce from "../assests/ecommerece.jpg";
+import ecommerce from "../assets/ecommerece.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 

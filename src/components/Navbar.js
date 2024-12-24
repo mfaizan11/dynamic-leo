@@ -1,18 +1,16 @@
 import React, { userState, useState } from "react";
 import { Link } from "react-router-dom";
-import favicontejaria from "../assests/favicontejaria.png";
+import favicontejaria from "../assets/favicontejaria.png";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuClose = () => {
-    setMenuOpen(false); // Close the menu
+    setMenuOpen(false);
   };
 
   return (
     <>
-      {/* Navbar Desktop Start */}
-
       <nav className="bg-cyan-900 shadow-lg shadow-cyan-900/50 p-5 flex  ">
         <div>
           <Link to="/">
@@ -45,7 +43,6 @@ function Navbar() {
             </button>
           </div>
         </div>
-        {/* Navbar End  */}
 
         <button
           className="block md:hidden"
@@ -68,7 +65,7 @@ function Navbar() {
         </button>
 
         <div
-          className={`fixed top-0 left-0 h-full w-64 bg-gray-700 transform transition-transform duration-300 z-50 ${
+          className={`fixed top-0 left-0 h-full w-64 bg-cyan-800 transform transition-transform duration-300 z-50 ${
             menuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >

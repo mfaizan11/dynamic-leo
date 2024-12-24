@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import Slider from "react-slick";
 
-import ecommerce from "../assests/ecommerece.jpg";
+import ecommerce from "../assets/ecommerece.jpg";
 import About from "./About";
 import Products from "../components/Products";
 import Aos from "aos";
