@@ -1,6 +1,6 @@
 import React, { userState, useState } from "react";
 import { Link } from "react-router-dom";
-import logo1 from "../assests/logo1.png";
+import favicontejaria from "../assests/favicontejaria.png";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,10 +13,10 @@ function Navbar() {
     <>
       {/* Navbar Desktop Start */}
 
-      <nav className="bg-gray-900 p-5 flex shadow-lg ">
+      <nav className="bg-cyan-900 shadow-lg shadow-cyan-900/50 p-5 flex  ">
         <div>
           <Link to="/">
-            <img src={logo1} alt="logo" className="h-10 w-auto " />
+            <img src={favicontejaria} alt="logo" className="h-10 w-auto " />
           </Link>
         </div>
 
@@ -24,19 +24,19 @@ function Navbar() {
           <div className="hidden lg:flex space-x-4  gap-1 text-lg ">
             <Link
               to="/"
-              className="text-white hover:bg-gray-700 p-2 rounded-md"
+              className="text-white hover:bg-cyan-700 p-2 rounded-md"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="text-white hover:bg-gray-700 p-2 rounded-md"
+              className="text-white hover:bg-cyan-700 p-2 rounded-md"
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="text-white hover:bg-gray-700 p-2 rounded-md"
+              className="text-white hover:bg-cyan-700 p-2 rounded-md"
             >
               Contact
             </Link>

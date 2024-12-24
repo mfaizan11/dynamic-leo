@@ -27,7 +27,7 @@ const Products = () => {
       {products.map((product) => (
         <div
           key={product.id}
-          className="bg-blue-950 shadow rounded p-4 text-center"
+          className="bg-cyan-900 shadow-lg shadow-cyan-900/50 hover:bg-cyan-500 hover:cursor-pointer hover:text-2xl rounded p-4 text-center"
         >
           <h3 className="text-lg text-white font-bold">{product.name}</h3>
           <p className="text-white">{product.price}</p>

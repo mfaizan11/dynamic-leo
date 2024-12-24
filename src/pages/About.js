@@ -25,8 +25,8 @@ function About() {
         />
       </div>
 
-      <div className="flex-1 basis-1 text-left">
-        <h1 className="font-bold text-4xl ">About us</h1>
+      <div className="flex-1 basis-1 text-center lg:text-left">
+        <h1 className="font-bold text-4xl mb-5">About us</h1>
 
         <p className="font-bold text-justify  hover:cursor-pointer hover:text-gray-700 hover:text-3xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus

@@ -37,7 +37,7 @@ function Home() {
                 alt="Slide 1"
                 className="w-full aspect-video object-cover"
               />
-              <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center text-white z-10">
+              <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-70 flex justify-center items-center text-white z-10">
                 <h1
                   className="text-3xl md:text-5xl font-bold"
                   data-aos="fade-up"
@@ -123,8 +123,8 @@ function Home() {
         </div>
       </div>
 
-      <div className="container mx-auto my-40  ">
-        <div className="mt-10">
+      <div className="container mx-auto">
+        <div>
           <About />
         </div>
       </div>
